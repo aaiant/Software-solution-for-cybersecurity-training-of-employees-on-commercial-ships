@@ -1,0 +1,6 @@
+Manipularea Sistemului de Identificare Automată
+
+
+	Atacurile la nivelul Sistemului de Identificare Automată pot fi efectuate în două moduri: asupra emițătoarelor sale sau asupra senzorilor pe care îi folosește. Emițătoarele au nevoie în permanență de informațiile despre poziție, respectiv de cele despre cursul navei, iar ulterior ele sunt transmise și participanților la traficul maritim. În schimb, atacurile asupra senzorilor de poziție presupun transmiterea de informații false, ale căror consecințe se regăsesc la nivelul echipamentului ECDIS sau radar. Printre ele se numără dispariția unor ținte sau oferirea de către ECDIS a unor date de poziție, respectiv de curs ale altor nave complet false, ceea ce ar duce echipajul în eroare. Acest tip de atac este folosit în cazul pirateriei, acolo unde mai întâi se asigură faptul că nava nu va detecta celelalte nave sau ambarcațiuni care se apropie de ea. ECDIS-ul are capacitatea de a efectua verificări pentru a confirma țintele Sistemului de Identificare Automată, prin intermediul radarului și poate depista atacurile folosindu-se de examinarea de tip încrucișată.
+
+	Pericolul este generat deoarece Sistemului de Identificare Automată nu trimite informațiile sub o formă criptată întrucât ele nu ar mai putea fi recepționate de alți participanți la trafic și astfel există șanse ca ele să fie interceptate și de pirați.

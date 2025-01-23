@@ -1,0 +1,10 @@
+Copii de rezervă în cloud
+
+
+	Copiile de rezervă în cloud reprezintă procesul de realizare a unor duplicate ale informațiilor importante și stocarea acestora pe serverele aflate în cloud. Această stocare poate implica unul sau mai multe servere pentru a nu pierde datele furnizate. Firma de cloud stabilește abonamentele lunare sau anuale în funcție de spațiul de stocare folosit și numărul de servere utilizate. Principiul de funcționare al acestui sistem se bazează pe două metode principale: copierea continuă și programată.
+
+	Copierea continuă se bazează pe duplicarea datelor în timp real, imediat cum acestea au fost schimbate, în limita spațiului de stocare achiziționat. Această metodă reprezintă tipul standard de copiere a datelor în cloud.
+
+	Pe de altă parte, copierile programate sunt realizate de programele inteligente ale firmelor de cloud. Acest proces de duplicare a informațiilor se realizează la intervale stabilite, în mod automat, astfel încât să existe o actualizare regulată a acestora.
+
+	Accesarea datelor necesită doar o conexiune la internet și autentificarea pe platforma furnizorului de servicii de cloud. În prezent, cele mai importante firme de cloud din lume sunt Amazon cu AWS, Microsoft cu Azure și Google cu GC și GCP.

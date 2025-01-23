@@ -1,0 +1,10 @@
+Omul din mijloc
+
+
+	Atacul care implică un om în mijloc se referă la o persoană complet neautorizată care este între utilizatorul unei aplicații și aceasta. El se bazează pe interceptarea mesajelor care sunt trimise în cadrul unei aplicații, modificarea lor astfel încât atacatorul să se dea drept persoana care a trimis mesajul și să înșele destinatarul mesajului respectiv.
+
+	Scopul acestui atac este de a obține informațiile personale ale destinatarului, inclusiv datele de conectare, precum și datele de plată, informațiile de pe cardul bancar. Ele pot duce la furtul de identitate, tranzacții și transferuri neautorizate și modificarea datelor conturilor de pe diferite platforme.
+
+	De cele mai multe ori, pe lângă scopurile clasice ale acestui atac, în domeniul naval este utilizat ca o metodă pentru a pătrunde și mai adânc în sistemele de la bord. De exemplu, o persoană neautorizată poate accesa stația VHF și se poate da drept ofițer de punte, emițând semnale false către alte nave sau către autoritățile navale. De asemenea, atacatorul poate modifica mesajele, documentele sau testele susținute pe internet de angajații companiei, atacând conturile acestora. Un alt exemplu ar fi atacarea aplicației web a companiei de care aparține echipajul navei prin intermediul conturilor lor. Astfel, scopurile și metodele de atac pot varia.
+
+	Pentru apărarea eficientă împotriva atacurilor ce presupun omul din mijloc, se recomandă utilizarea serviciilor de securizare a straturilor de transport și a socket-urilor, care asigură criptarea comunicațiilor și confirmarea identității participanților. În plus, este recomandată folosirea unei rețele private virtuale care creează tuneluri criptate și protejează traficul de rețea. De asemenea, sunt absolut necesare folosirea autentificării cu mai mulți factori, care întărește securitatea accesului la informațiile private, precum și implementarea sistemelor de detecție și prevenire a intruziunilor.

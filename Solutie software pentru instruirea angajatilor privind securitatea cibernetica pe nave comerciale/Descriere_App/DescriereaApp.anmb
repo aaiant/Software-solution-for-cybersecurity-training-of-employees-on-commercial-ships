@@ -1,0 +1,60 @@
+Fereastra principală
+
+
+	Fereastra care se deschide imediat ce aplicația este lansată reprezintă un cadru în care sunt incorporate mai multe pagini aparținând unor carduri.
+
+	În primul rând, fiecare dintre aceste carduri are rolul de a stoca câte două pagini realizate independent și de a permite schimbul între ele în funcție de preferințele utilizatorului. Utilizând această tehnică, a fost realizată o reducere semnificativă a spațiului ocupat de aplicație pe ecran, evitând astfel deschiderea simultană a mai multor pagini.
+
+	Asemenea carduri se regăsesc în părțile de vest, sud și centru ale aplicației deoarece cadrul principal este organizat conform punctelor cardinale și include și o poziție centrală.
+
+
+Meniul aplicației
+
+
+	Aplicația construită conține un meniu clasic în partea de sus, prin care pot fi accesate două submeniuri: fișier și fereastră. În cadrul submeniului fișier sunt disponibile nu mai puțin de trei butoane: import, export și ieșire.
+
+	Primul buton, cel de import, permite citirea fișierelor cu extensie txt și anmb. Ele pot fi alese de oriunde din memoria dispozitivului deoarece în momentul apăsării acestui buton se va deschide o fereastră specială pentru a naviga în orice director și în orice disc de memorie pentru a alege fișierul dorit. Utilizatorul nu trebuie decât să selecteze fișierul, după care să apese butonul de deschide și textul aflat în cadrul fișierului va fi afișat automat în zona dedicată textului din pagina principală. Dacă va apăsa pe butonul de renunțare, această fereastra se va închide și nu va fi nimic citit și afișat în zona corespunzătoare textului.
+
+	Al doilea buton este cel de export și permite salvarea fișierelor cu extensiile txt și anmb pe dispozitivul pe care rulează aplicația. Atunci când acest buton este apăsat, se va deschide o fereastra similară cu cea pentru citirea fișierelor, dar cu opțiunea de salvare în loc de deschidere. Utilizatorul va trebui să aleagă directorul în care va fi salvat fișierul, să introducă denumirea acestuia împreună cu extensia și după ce apasă pe salvare, fișierul va fi creat conținând textul curent din panoul de text aflat în zona centrală a aplicației.
+
+	Al treilea buton, denumit ieșire, reprezintă o alternativă pentru a închide aplicația. Așadar, înainte ca angajatul să părăsească programul, va apărea un mesaj de confirmare cu opțiunile da sau nu, pentru a preveni închiderea involuntară a acesteia.
+
+	Al doilea submeniu, cel denumit fereastră, conține, la rândul său, încă alte două meniuri: vizibilitate și aspect. Primul dintre ele permite afișarea paginilor aplicației. Ele sunt prezentate sub formă de butoane, fiecare cu o bifă care indică dacă pagina este activă. Acest mecanism automat ajută la prevenirea erorilor și a închiderii neașteptate a aplicației.
+
+	Mereu, într-un card din orice punct, va fi afișată o pagină astfel încât cadrul principal să nu fie niciodată gol. De asemenea, utilizatorul poate apăsa de câte ori dorește pe un buton sau meniu deoarece acest lucru nu va afecta funcționarea programului în niciun fel.
+
+	Există și un meniu special conceput pentru tematică, având rolul de a schimba culorile paginilor în funcție de preferințele fiecărei persoane. Gama de culori disponibilă este extrem de variată, iar denumirile culorilor sunt sugestive: prima denumire reprezintă prima culoare din paleta selectată și este aplicată în zona de vest a programului, în timp ce a doua denumire indică ultima culoare din paletă, aplicată în zona de est. Meniul utilizează butoane grupate astfel încât să permită selectarea unui singur buton pe rând. După alegerea temei, aceasta se aplică întregii aplicații în câteva secunde.
+
+
+Modul de funcționare al zonei de vest
+
+
+	Ca mod implicit, aplicația oferă în partea de vest (stânga paginii) informații despre tema aleasă, coordonatorul și autorul temei de licență. În această secțiune sunt prezente două butoane care fac legătura cu alte două pagini din aplicația curentă: panou text și schimbare panou.
+
+	Primul buton trimite un semnal către zona centrală pentru a deschide pagina care conține zona de text și meniul asociat. Astfel, se va face schimbul între cele două pagini independente din cardul dedicat zonei centrale.
+
+	Cel de-al doilea buton schimbă pagina care conține informațiile generale cu pagina despre categoriile de atacuri și virușii specifici. Ea conține o gamă variată de butoane, fiecare afișând textul cu informațiile specifice virusului selectat. Dacă înainte de apăsarea butonului pentru virusul sau atacul specific a fost deja accesată pagina dedicată textului, atunci în momentul apăsării butonului, va fi modificat doar textul din zona centrală.
+
+
+Modul de funcționare al zonei centrale
+
+
+	În partea centrală va fi afișată pagina principală a aplicației care conține logo-ul facultății. Ea este prima pagină dintr-un card care include încă o pagină, dedicată textului.
+
+	Cea de-a doua pagină a cardului conține zona de text unde sunt prezentate informațiile detaliate despre viruși, atacuri și recomandări. De asemenea, pagina dispune de scroll-uri verticale și orizontale pentru a afișa complet textele, chiar și cele de dimensiuni foarte mari. De altfel, pagina nu este simplă; ea include o altă pagină independentă cu butoane care permit utilizatorului să controleze ce se întâmplă cu pagina dedicată textului și ce informații sunt afișate sau scrise.
+
+	Primele două butoane, cele de import și export, reprezintă o alternativă rapidă la butoanele din submeniul fișier al aplicației. Prin intermediul lor, pot fi citite sau scrise diferite fișiere cu extensii txt și anmb.
+
+	Cel de-al treilea buton se numește teorie și, atunci când este apăsat, trimite un semnal către cardul care reprezintă zona vestică, pentru a accesa pagina unde sunt informațiile despre viruși și atacuri.
+
+	Al patrulea buton este ștergere. De fiecare dată când o persoană dorește să șteargă tot textul din panoul specific, poate apăsa pe acest buton. Înainte de ștergerea propriu-zisă, va primi un mesaj de confirmare, în care trebuie să selecteze dacă renunță sau continuă. Metoda a fost introdusă ca măsură de precauție, în cazul în care un utilizator apasă din greșeală butonul de ștergere.
+
+	Ultimul buton din această pagină este cel de închidere și are rolul de a închide pagina care conține zona de text alături de butoanele sale și să le înlocuiască cu pagina principală a aplicației, unde este logo-ul facultății.
+
+
+Modul de funcționare al zonei de sud
+
+
+	În partea sudică, sunt disponibile două pagini. Una dintre acestea este destinată descrierii detaliate a aplicației, astfel încât utilizatorii să înțeleagă modul în care aceasta funcționează. De asemenea, aceasta reprezintă prima pagină vizualizată atunci când aplicația este lansată în execuție. Pagina utilizează și ea scroll-uri, la fel ca și zona dedicată textului.
+
+	A doua pagină utilizată de cardul zonei de sud, atunci când se efectuează schimbarea între pagini, este despre pericole și recomandări. În această pagină, butoanele pot fi selectate pe rând, iar de fiecare dată când este apăsat un alt buton, acesta trimite automat un semnal către cardul zonei centrale pentru a afișa informațiile referitoare la pericolul sau recomandarea selectată.

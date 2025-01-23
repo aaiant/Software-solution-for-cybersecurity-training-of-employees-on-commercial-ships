@@ -1,0 +1,9 @@
+Rețea de dispozitive infectate
+
+	O rețea de dispozitive infectate este formată dintr-un grup de calculatoare ce conțin programe malițioase și care sunt controlate de un atacator. Aceste dispozitive sunt folosite pentru a desfășura atacuri coordonate.
+
+	Cea mai cunoscută metodă de atac folosind rețeaua de dispozitive infectate este refuzarea serviciului distribuit. Aceasta presupune trimiterea unor cereri într-un mod excesiv împotriva unui serviciu pentru a-l copleși în totalitate. În cadrul navei, refuzarea serviciului distribuit are potențialul de a compromite sistemele de navigație și comunicații. Prin infiltrarea în rețelele de pe nave, poate cauza funcționarea defectuoasă a echipamentelor, poate intercepta sau manipula datele esențiale pentru navigație și are capacitatea de a controla sistemele automate.
+
+	Printre indiciile care ajută la constatarea unui atac de acest tip se numără: o serie de activități necunoscute, dificultăți în închiderea și pornirea echipamentelor, utilizarea excesivă a memoriei de acces aleatoriu și o conexiune la internet extrem de scăzută.
+
+	Cele mai eficiente metode de apărare împotriva atacurilor bazate pe rețelele de dispozitive infectate sunt: utilizarea zidurilor de rețea, a rețelelor private virtuale și a aplicațiilor de monitorizare a traficului, care sunt folosite pentru detectarea intruziunilor. De asemenea, se recomandă utilizarea soluțiilor antivirus care efectuează scanări avansate atât la nivelul sistemului de operare, cât și la nivelul rețelei. Pe lângă aceste metode, mai sunt eficiente și folosirea cât mai multor parole (pentru router, telefon, aplicații) și actualizarea antivirusului la zi. În plus, pentru sporirea siguranței în cazul pierderii de informații, este considerată esențială realizarea unor copii de siguranță, în special în cloud, având în vedere riscul ca sistemul de operare atacat să nu mai funcționeze.

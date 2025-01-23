@@ -1,0 +1,8 @@
+Înșelarea Sistemului de Poziționare Globală
+
+
+    Ca și o scurtă teorie, semnalul Sistemului de Poziționare Globală este unul slab și transmis prin intermediul sateliților aflați pe orbita. Dacă este folosit un dispozitiv performant, cum ar fi un transmițător radio care să emită semnale cu mult mai puternice față de semnalul clasic al Sistemului de Poziționare Globală, atunci acesta va fi depășit cu ușurință și va conduce la o afișare falsă a coordonatelor și orei pe echipamentele de navigație, precum și pe celelalte dispozitive care se afla sub raza semnalului mai puternic. De aceea, atacul este asociat cu bruiajul electronic.
+
+	Cel mai mare pericol pentru angajații navelor comerciale expuse atacurilor care implică înșelarea Sistemului de Poziționare Globală este ca navele lor să fie ghidate în cu totul alte părți față de rutele stabilite. Aceste atacuri sunt realizate pentru a fura marfa deținută și pentru a cere, uneori, chiar și răscumpărarea echipajului (realizarea pirateriei). Printre practicile utilizate se numără și lacătele cu Sistem de Poziționare Globală, care emit încontinuu semnale puternice pentru a bruia alte semnale și care pot fi deschise numai la ajungerea lor în locația setată.
+
+	Pentru prevenirea unor asemenea evenimente, angajații au în ajutor receiverele. Acestea au rolul de a monitoriza direcția de sosire a semnalului, întrucât informațiile care sunt adevărate provin de la mai mulți sateliți în același timp.
