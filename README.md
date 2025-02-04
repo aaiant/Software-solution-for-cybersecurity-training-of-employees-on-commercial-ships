@@ -23,9 +23,6 @@ about cybersecurity in the maritime field. The project is designed to work on an
 
 <br><h3>Images</h3>
 <hr>
-<div align="center">
-  <h2>App-List</h2>
-</div>
 <div align="center" style="display: grid; 
                           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
                           gap: 20px;
@@ -42,8 +39,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Main%20Page%20-%20iPhone%2016.png">
-    <img alt="MainApp2" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20Main%20Page.png">
+    <img alt="Importing" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -51,8 +48,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Main%20Page%202%20-%20iPhone%2016.png">
-    <img alt="NumericalMethods" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20Import.png">
+    <img alt="Themes" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -60,8 +57,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Numerical%20Methods%20Repo%20Details.png">
-    <img alt="SolidEdge" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20Themes.png">
+    <img alt="Exit" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -69,8 +66,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Solid%20Edge%20Repo%20Details.png">
-     <img alt="GitHub" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20Exit.png">
+     <img alt="Cloud" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -78,8 +75,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Visit%20Repo%20-%20iPhone%2016.png">
-     <img alt="App" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20Info%20Cloud.png">
+     <img alt="Attacks" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -87,8 +84,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Solid%20Edge%20Repo%20Details.png">
-     <img alt="App" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20Types%20of%20Attacks.png">
+     <img alt="Windows" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -96,8 +93,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Solid%20Edge%20Repo%20Details.png">
-     <img alt="App" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20App%20Windows.png">
+     <img alt="Ubuntu" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -105,8 +102,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Solid%20Edge%20Repo%20Details.png">
-     <img alt="App" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20App%20Ubuntu.png">
+     <img alt="ParrotOS" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -114,8 +111,8 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Solid%20Edge%20Repo%20Details.png">
-     <img alt="App" width="400" style="width: 100%; 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20App%20ParrotOS.png">
+     <img alt="KaliLinux" width="400" style="width: 100%; 
                                             max-width: 400px;
                                             border-radius: 8px;
                                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -123,5 +120,14 @@ about cybersecurity in the maritime field. The project is designed to work on an
                                             &:hover {
                                                 transform: scale(1.02);
                                             }" 
-        src="https://github.com/aaiant/SwiftUI/blob/main/App-List/Images/Simulator%20Solid%20Edge%20Repo%20Details.png">
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20App%20Kali%20Linux.png">
+  <img alt="macOSVentura" width="400" style="width: 100%; 
+                                            max-width: 400px;
+                                            border-radius: 8px;
+                                            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                                            transition: transform 0.3s ease;
+                                            &:hover {
+                                                transform: scale(1.02);
+                                            }" 
+        src="https://github.com/aaiant/Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships/blob/main/Images/Image%20App%20macOS%20Ventura.png">
 </div>
