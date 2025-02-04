@@ -5,7 +5,6 @@ package Interfata;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,11 +24,11 @@ public class Fereastra_Butoane extends JPanel{
         this.setBorder(BorderFactory.createCompoundBorder(exterior, interior));
 
         //  Initializarea componentelor
-        inchidereButon = new JButton("Închidere");
-        importButon = new JButton("Import");
-        exportButon = new JButton("Export");
-        teorieButon = new JButton("Teorie");
-        stergereButon = new JButton("Ștergere");
+        inchidereButon = new JButton("Închidere"); inchidereButon.setFocusPainted(false);
+        importButon = new JButton("Import"); importButon.setFocusPainted(false);
+        exportButon = new JButton("Export"); exportButon.setFocusPainted(false);
+        teorieButon = new JButton("Teorie"); teorieButon.setFocusPainted(false);
+        stergereButon = new JButton("Ștergere"); stergereButon.setFocusPainted(false);
         this.add(importButon);
         this.add(exportButon);
         this.add(teorieButon);

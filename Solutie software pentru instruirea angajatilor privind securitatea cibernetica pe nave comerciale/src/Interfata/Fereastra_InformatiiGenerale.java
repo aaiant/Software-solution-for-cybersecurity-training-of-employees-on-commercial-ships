@@ -7,7 +7,9 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import lombok.*;
 
+@Getter @Setter
 public class Fereastra_InformatiiGenerale extends JPanel {
     //  Componente
 
@@ -49,8 +51,8 @@ public class Fereastra_InformatiiGenerale extends JPanel {
         subgrupaLabel = new JLabel("Subgrupa: ");
         denSubgrupaLabel = new JLabel("4111C");
 
-        schimbareButon = new JButton("Schimbare Panou");
-        panouTextButon = new JButton("Panou Text");
+        schimbareButon = new JButton("Schimbare Panou"); schimbareButon.setFocusPainted(false);
+        panouTextButon = new JButton("Panou Text"); panouTextButon.setFocusPainted(false);
 
         //  Adaugare ActionListener
         schimbareButon.addActionListener(new ActionListener() {
@@ -73,84 +75,6 @@ public class Fereastra_InformatiiGenerale extends JPanel {
 
     //  Zona de metode
 
-    //  Gettere
-
-
-    public Border getExterior() {
-        return exterior;
-    }
-
-    public Border getInterior() {
-        return interior;
-    }
-
-    public starePanouTextListener getListener2() {
-        return listener2;
-    }
-
-    public JLabel getTitluLabel() {
-        return titluLabel;
-    }
-
-    public JLabel getTitluGeneralLabel() {
-        return titluGeneralLabel;
-    }
-
-    public JLabel getStudentLabel() {
-        return studentLabel;
-    }
-
-    public JLabel getNumeStudentLabel() {
-        return numeStudentLabel;
-    }
-
-    public JLabel getCoordonatorLabel() {
-        return coordonatorLabel;
-    }
-
-    public JLabel getNumeCoordonatorLabel() {
-        return numeCoordonatorLabel;
-    }
-
-    public JLabel getFacultateLabel() {
-        return facultateLabel;
-    }
-
-    public JLabel getSpecializareLabel() {
-        return specializareLabel;
-    }
-
-    public JLabel getDenFacultateLabel() {
-        return denFacultateLabel;
-    }
-
-    public JLabel getDenSpecializareLabel() {
-        return denSpecializareLabel;
-    }
-
-    public JLabel getAnLabel() {
-        return anLabel;
-    }
-
-    public JLabel getDenAnLabel() {
-        return denAnLabel;
-    }
-
-    public JLabel getGrupaLabel() {
-        return grupaLabel;
-    }
-
-    public JLabel getDenGrupaLabel() {
-        return denGrupaLabel;
-    }
-
-    public JLabel getSubgrupaLabel() {
-        return subgrupaLabel;
-    }
-
-    public JLabel getDenSubgrupaLabel() {
-        return denSubgrupaLabel;
-    }
     //  Settere
 
     public void setStarePanouInfoGeneralListener(starePanouInfoGeneralListener listener){

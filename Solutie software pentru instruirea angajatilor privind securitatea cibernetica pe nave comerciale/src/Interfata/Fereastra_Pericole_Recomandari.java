@@ -4,9 +4,9 @@ package Interfata;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import lombok.*;
 
+@Getter @Setter
 public class Fereastra_Pericole_Recomandari extends JPanel {
     //  Componente
     private JCheckBox VPNCheck, trackerCheck, antiVirusCheck, fingerPrintingCheck, cloudBackupCheck, recomandariCheck;
@@ -22,12 +22,12 @@ public class Fereastra_Pericole_Recomandari extends JPanel {
         //  Initializare componente
         grupCheckBox = new ButtonGroup();
 
-        VPNCheck = new JCheckBox("Rețea privată virtuală");
-        trackerCheck = new JCheckBox("Atacuri prin urmărirea activităților de pe internet");
-        fingerPrintingCheck = new JCheckBox("Amprentare digitală");
-        cloudBackupCheck = new JCheckBox("Copii de rezervă în cloud");
-        antiVirusCheck = new JCheckBox("AntiVirus");
-        recomandariCheck = new JCheckBox("Recomandari");
+        VPNCheck = new JCheckBox("Rețea privată virtuală"); VPNCheck.setFocusPainted(false);
+        trackerCheck = new JCheckBox("Atacuri prin urmărirea activităților de pe internet"); trackerCheck.setFocusPainted(false);
+        fingerPrintingCheck = new JCheckBox("Amprentare digitală"); fingerPrintingCheck.setFocusPainted(false);
+        cloudBackupCheck = new JCheckBox("Copii de rezervă în cloud"); cloudBackupCheck.setFocusPainted(false);
+        antiVirusCheck = new JCheckBox("AntiVirus"); antiVirusCheck.setFocusPainted(false);
+        recomandariCheck = new JCheckBox("Recomandari"); recomandariCheck.setFocusPainted(false);
 
 
 
@@ -91,32 +91,5 @@ public class Fereastra_Pericole_Recomandari extends JPanel {
         this.add(antiVirusCheck, gc);
 
 
-    }
-
-    //  Getters
-
-
-    public JCheckBox getVPNCheck() {
-        return VPNCheck;
-    }
-
-    public JCheckBox getTrackerCheck() {
-        return trackerCheck;
-    }
-
-    public JCheckBox getAntiVirusCheck() {
-        return antiVirusCheck;
-    }
-
-    public JCheckBox getFingerPrintingCheck() {
-        return fingerPrintingCheck;
-    }
-
-    public JCheckBox getCloudBackupCheck() {
-        return cloudBackupCheck;
-    }
-
-    public JCheckBox getRecomandariCheck() {
-        return recomandariCheck;
     }
 }

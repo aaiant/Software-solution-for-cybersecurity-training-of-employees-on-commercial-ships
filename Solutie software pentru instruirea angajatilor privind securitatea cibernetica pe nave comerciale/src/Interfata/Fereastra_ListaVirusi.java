@@ -7,7 +7,9 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import lombok.*;
 
+@Getter @Setter
 public class Fereastra_ListaVirusi extends JPanel {
     //  Componente
     private JLabel virusi_malwareLabel, atacuriReteaLabel, atacuriSistemeNavigatieLabel,
@@ -41,7 +43,7 @@ public class Fereastra_ListaVirusi extends JPanel {
         atacuriComunicatii_DateLabel = new JLabel("Atacuri asupra comunicațiilor și a datelor: ");
         exploatareVulnerabilitatiLabel = new JLabel("Exploatarea vulnerabilităților informatice și fizice: ");
 
-        schimbareButon = new JButton("Schimbare Panou");
+        schimbareButon = new JButton("Schimbare Panou"); schimbareButon.setFocusPainted(false);
         //  Adaugare ActionListener
         schimbareButon.addActionListener(new ActionListener() {
             @Override
@@ -94,113 +96,6 @@ public class Fereastra_ListaVirusi extends JPanel {
     }
 
     //  Metode
-
-    //  Gettere
-
-
-    public Border getExterior() {
-        return exterior;
-    }
-
-    public Border getInterior() {
-        return interior;
-    }
-
-    public JLabel getVirusi_malwareLabel() {
-        return virusi_malwareLabel;
-    }
-
-    public JLabel getAtacuriReteaLabel() {
-        return atacuriReteaLabel;
-    }
-
-    public JLabel getAtacuriSistemeNavigatieLabel() {
-        return atacuriSistemeNavigatieLabel;
-    }
-
-    public JLabel getAtacuriSistemeIndustrialeLabel() {
-        return atacuriSistemeIndustrialeLabel;
-    }
-
-    public JLabel getAtacuriComunicatii_DateLabel() {
-        return atacuriComunicatii_DateLabel;
-    }
-
-    public JLabel getExploatareVulnerabilitatiLabel() {
-        return exploatareVulnerabilitatiLabel;
-    }
-
-    public JRadioButton getVirusiTraditionaliRadio() {
-        return virusiTraditionaliRadio;
-    }
-
-    public JRadioButton getTrojanRadio() {
-        return trojanRadio;
-    }
-
-    public JRadioButton getRansomwareRadio() {
-        return ransomwareRadio;
-    }
-
-    public JRadioButton getRootkitRadio() {
-        return rootkitRadio;
-    }
-
-    public JRadioButton getWormRadio() {
-        return wormRadio;
-    }
-
-    public JRadioButton getSpywareRadio() {
-        return spywareRadio;
-    }
-
-    public JRadioButton getAdwareRadio() {
-        return adwareRadio;
-    }
-
-    public JRadioButton getBotnetRadio() {
-        return botnetRadio;
-    }
-
-    public JRadioButton getAtacuriDDoSRadio() {
-        return atacuriDDoSRadio;
-    }
-
-    public JRadioButton getMitMRadio() {
-        return MitMRadio;
-    }
-
-    public JRadioButton getGPS_SpoofingRadio() {
-        return GPS_SpoofingRadio;
-    }
-
-    public JRadioButton getManipulareAISRadio() {
-        return manipulareAISRadio;
-    }
-
-    public JRadioButton getPhishing_spearPhishingRadio() {
-        return phishing_spearPhishingRadio;
-    }
-
-    public JRadioButton getDataBreachRadio() {
-        return dataBreachRadio;
-    }
-
-    public JRadioButton getExploitsRadio() {
-        return exploitsRadio;
-    }
-
-    public JRadioButton getZeroDayAttacksRadio() {
-        return zeroDayAttacksRadio;
-    }
-
-    public JRadioButton getMalwareICS_specificRadio() {
-        return malwareICS_specificRadio;
-    }
-
-    public JRadioButton getStuxnet_like_attacksRadio() {
-        return stuxnet_like_attacksRadio;
-    }
 
     public void setStarePanouListaVirusiListener(starePanouListaVirusiListener listener) {
         this.listener = listener;

@@ -1,32 +1,17 @@
 package Interfata;
 
-//  Zona de import
-
-
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-
-//  Importarea culorilor realizate in pachetul Tematica
-
+import lombok.*;
 import Tematica.*;
-
-//  Importarea claselor realizate in pachetul Fisiere
-
 import Fisiere.*;
-
-//  Importarea claselor realizate in pachetul SchimbareCulori
-
 import SchimbareCulori.*;
 
-
+@Getter @Setter
 public class CadrulPrincipal extends JFrame {
-    //  Componente
-
     private JPanel multimeMeniuriWest, multimeMeniuriCenter, multimeMeniuriSouth;
     private Fereastra_ListaVirusi fereastraListaVirusi;
     private Fereastra_InformatiiGenerale fereastraInformatiiGenerale;
@@ -45,7 +30,6 @@ public class CadrulPrincipal extends JFrame {
     private ButtonGroup grupRadioButtonItem;
     private JFileChooser fereastraAlegereFisier;
 
-    //  Constructor
     public CadrulPrincipal() {
         super("Soluție software pentru instruirea angajaților privind securitatea cibernetică pe nave comerciale");
         this.setMinimumSize(new Dimension(1400, 650));
@@ -54,12 +38,9 @@ public class CadrulPrincipal extends JFrame {
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setJMenuBar(realizareJMenuBar());
-
-        //  Setarea logo-ului
         ImageIcon logo_anmb = new ImageIcon("Poze/Logo1.png");
         this.setIconImage(logo_anmb.getImage());
 
-        //  Initializarea componentelor
         fereastraListaVirusi = new Fereastra_ListaVirusi();
         fereastraInformatiiGenerale = new Fereastra_InformatiiGenerale();
         fereastraText = new Fereastra_Text();
@@ -68,32 +49,22 @@ public class CadrulPrincipal extends JFrame {
         fereastraDescriereAplicatie = new Fereastra_DescriereAplicatie();
         fereastraPericoleRecomandari = new Fereastra_Pericole_Recomandari();
         fereastraGoala = new FereastraGoala();
-        //  Initializarea CardLayout-uri
-        //cardLayoutMultimeVest = new Ca
-
-        //  Setarea lui JFileChooser
         fereastraAlegereFisier.addChoosableFileFilter(new Fisiere());
-
-        //  Realizarea de CardLayout-uri
         multimeMeniuriWest = new JPanel(new CardLayout());
         multimeMeniuriWest.add(fereastraListaVirusi, "Fereastra Virusi si Malware");
         multimeMeniuriWest.add(fereastraInformatiiGenerale, "Fereastra Informatii Generale");
-
         multimeMeniuriCenter = new JPanel(new CardLayout());
         multimeMeniuriCenter.add(fereastraText, "Fereastra Text");
         multimeMeniuriCenter.add(fereastraPrincipala, "Fereastra Principala");
-
         multimeMeniuriSouth = new JPanel(new CardLayout());
         multimeMeniuriSouth.add(fereastraPericoleRecomandari, "Fereastra Pericole si Recomandari");
         multimeMeniuriSouth.add(fereastraDescriereAplicatie, "Fereastra Descriere Aplicatie");
 
-        //  Adaugarea elementelor
         this.add(multimeMeniuriWest, BorderLayout.WEST);
         this.add(multimeMeniuriCenter, BorderLayout.CENTER);
         this.add(multimeMeniuriSouth, BorderLayout.SOUTH);
         this.add(fereastraGoala, BorderLayout.EAST);
 
-        //  Adaugare ActionListener
         fereastraText.getFereastraButoane().setStarePanouTextListener(new starePanouTextListener() {
             @Override
             public void stare(boolean stareActuala) {
@@ -106,7 +77,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
         fereastraText.getFereastraButoane().setStarePanouListaVirusiListener(new starePanouListaVirusiListener() {
             @Override
             public void stare(boolean stareActuala) {
@@ -119,8 +89,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
-        //  Este folosit pentru citire / import din cadrul Fereastra_Butoane
         fereastraText.getFereastraButoane().getImportButon().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -132,8 +100,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
-        //  Este folosit pentru scriere / export din cadrul Fereastra_Butoane
         fereastraText.getFereastraButoane().getExportButon().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -145,8 +111,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
-        //  Este folosit pentru a curata continutul zonei de text
         fereastraText.getFereastraButoane().getStergereButon().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -157,7 +121,6 @@ public class CadrulPrincipal extends JFrame {
                     fereastraText.getZonaText().setText("");
             }
         });
-
         fereastraListaVirusi.setStarePanouListaVirusiListener(new starePanouListaVirusiListener() {
             @Override
             public void stare(boolean stareActuala) {
@@ -170,7 +133,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
         fereastraInformatiiGenerale.setStarePanouInfoGeneralListener(new starePanouInfoGeneralListener() {
             @Override
             public void stare(boolean stareActuala) {
@@ -183,7 +145,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
         fereastraInformatiiGenerale.setStarePanouTextListener(new starePanouTextListener() {
             @Override
             public void stare(boolean stareActuala) {
@@ -195,35 +156,20 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
-        //  Incarcarea textului din DescriereaApp.anmb
         incarcareText_DescriereApp();
-
-        //  Setarea temei curente
         incarcareTemaCurenta();
-
-        //  Adaugarea ActionListener pentru JRadioButton din Panou Teorie
         realizareActionListenerPanouTeorie();
-
-        //  Asigurarea ordinii vizualizarii cardurilor
         CardLayout card = (CardLayout) (multimeMeniuriWest.getLayout());
         card.show(multimeMeniuriWest, "Fereastra Informatii Generale");
-
         CardLayout card2 = (CardLayout) (multimeMeniuriCenter.getLayout());
         card2.show(multimeMeniuriCenter, "Fereastra Principala");
-
         CardLayout card3 = (CardLayout) (multimeMeniuriSouth.getLayout());
         card3.show(multimeMeniuriSouth, "Fereastra Descriere Aplicatie");
-
         this.pack();
         this.setVisible(true);
     }
 
-    //  Zona de metode
-
-    //  ActionListener pentru JRadioButton-urile din Panou Teorie
     private void realizareActionListenerPanouTeorie() {
-
         getFereastraListaVirusi().getTrojanRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -236,7 +182,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getRansomwareRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -249,7 +194,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getRootkitRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -262,7 +206,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getWormRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -275,7 +218,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getAdwareRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -288,7 +230,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getSpywareRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -301,7 +242,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getBotnetRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -314,7 +254,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getMitMRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -327,7 +266,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getGPS_SpoofingRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -340,7 +278,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getManipulareAISRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -353,7 +290,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getPhishing_spearPhishingRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -366,7 +302,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getZeroDayAttacksRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -379,7 +314,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         getFereastraListaVirusi().getMalwareICS_specificRadio().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -392,31 +326,19 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
-        //  Apelarea pentru fereastra de Pericole si Recomandari (activarea butoanelor din Sud)
         adaugareActionListener_fPericole();
-
     }
-
-    //  Realizarea JMenuBar-ului
 
     private JMenuBar realizareJMenuBar(){
         JMenuBar meniuPrincipal = new JMenuBar();
-
-        //  Realizarea de meniuri
         fisier = new JMenu("Fisier");
         fereastra = new JMenu("Fereastra");
-
-        //  Realizarea de submeniuri
         JMenu vizibilitate = getVizibilitateMeniu();
         JMenu aspect = getAspectMeniu();
-
-        //  Realizarea de item-uri
         JMenuItem importItem = new JMenuItem("Import");
         JMenuItem exportItem = new JMenuItem("Export");
         JMenuItem iesireItem = new JMenuItem("Ieșire");
 
-        //  Realizarea ActionListener pentru item-uri
         importItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -432,7 +354,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
         exportItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -448,7 +369,6 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
         iesireItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -460,29 +380,20 @@ public class CadrulPrincipal extends JFrame {
                     System.exit(0);
             }
         });
-
-        //  Adaugarea submeniurilor la meniurile principale
         fereastra.add(vizibilitate);
         fereastra.add(aspect);
-
-        //  Adaugarea item-urilor la meniuri
         fisier.add(importItem);
         fisier.add(exportItem);
         fisier.addSeparator();
         fisier.add(iesireItem);
-
-        //  Adaugarea meniurilor in bara principala
         meniuPrincipal.add(fisier);
         meniuPrincipal.add(fereastra);
-
         return meniuPrincipal;
     }
 
-    //  Realizarea de submeniuri
     private JMenu getVizibilitateMeniu() {
         JMenu vizibilitate = new JMenu("Vizibilitate");
 
-        //  Realizarea item-urilor
         panouTeorieItem = new JCheckBoxMenuItem("Panou Teorie");
         panouInfoGeneralItem = new JCheckBoxMenuItem("Panou Informații Generale");
         panouTextItem = new JCheckBoxMenuItem("Panou Text");
@@ -499,7 +410,6 @@ public class CadrulPrincipal extends JFrame {
         antiVirusItem = new JCheckBoxMenuItem("AntiVirus");
         recomandariItem = new JCheckBoxMenuItem("Recomandari");
 
-        //  Setarea vizibilitatilor pentru fiecare item
         panouTeorieItem.setSelected(false);
         panouInfoGeneralItem.setSelected(true);
         panouTextItem.setSelected(false);
@@ -508,7 +418,6 @@ public class CadrulPrincipal extends JFrame {
         panouPericoleRecomandariItem.setSelected(false);
         ecranCompletItem.setSelected(false);
 
-        //  Setare ActionListener
         panouTeorieItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -519,7 +428,6 @@ public class CadrulPrincipal extends JFrame {
                 CadrulPrincipal.this.setDimNoua(CadrulPrincipal.this, 1400, 750);
             }
         });
-
         panouInfoGeneralItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -533,7 +441,6 @@ public class CadrulPrincipal extends JFrame {
                     ecranComplet(CadrulPrincipal.this);
             }
         });
-
         panouTextItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -543,7 +450,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(false);
             }
         });
-
         panouPagPrincipala.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -553,7 +459,6 @@ public class CadrulPrincipal extends JFrame {
                 getPanouPagPrincipala().setSelected(true);
             }
         });
-
         panouDescrieAppItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -572,7 +477,6 @@ public class CadrulPrincipal extends JFrame {
                 updatePreferredSize(getMultimeMeniuriSouth(), new Dimension(1400, 250));
             }
         });
-
         panouPericoleRecomandariItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -587,9 +491,6 @@ public class CadrulPrincipal extends JFrame {
                 updatePreferredSize(getMultimeMeniuriSouth(), new Dimension(1400, 50));
             }
         });
-
-        // Separator
-
         ecranCompletItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -609,27 +510,21 @@ public class CadrulPrincipal extends JFrame {
                 }
             }
         });
-
-        //  Separator
-
         setareActionListenerJCheckBoxItem();
-
-        //  Adaugarea item-urilor
         vizibilitate.add(panouTeorieItem);
         vizibilitate.add(panouInfoGeneralItem);
         vizibilitate.add(panouTextItem);
         vizibilitate.add(panouPagPrincipala);
         vizibilitate.add(panouDescrieAppItem);
         vizibilitate.add(panouPericoleRecomandariItem);
-        vizibilitate.addSeparator();
-        vizibilitate.add(ecranCompletItem);
+        //vizibilitate.addSeparator();
+        //vizibilitate.add(ecranCompletItem);
         vizibilitate.addSeparator();
         vizibilitate.add(VPNItem);
         vizibilitate.add(trackerItem);
         vizibilitate.add(fingerPrintingItem);
         vizibilitate.add(cloudBackUpItem);
         vizibilitate.add(antiVirusItem);
-
         return vizibilitate;
     }
 
@@ -637,67 +532,46 @@ public class CadrulPrincipal extends JFrame {
         panou.setPreferredSize(dimensiune);
         panou.revalidate();
         panou.repaint();
-
     }
 
     private JMenu getAspectMeniu() {
         JMenu aspect = new JMenu("Aspect");
         grupRadioButtonItem = new ButtonGroup();
-
-        //  Realizarea item-urilor
         defaultItem = new JRadioButtonMenuItem("Modul implicit");
         grupRadioButtonItem.add(defaultItem);
         defaultItem.setSelected(true);
-
         mov_rozItem = new JRadioButtonMenuItem("Mov - Roz");
         grupRadioButtonItem.add(mov_rozItem);
-
         mov_galbenItem = new JRadioButtonMenuItem("Mov - Galben");
         grupRadioButtonItem.add(mov_galbenItem);
-
         mov_rosuItem = new JRadioButtonMenuItem("Mov - Roșu");
         grupRadioButtonItem.add(mov_rosuItem);
-
         movInchis_cremItem = new JRadioButtonMenuItem("Mov Închis - Crem");
         grupRadioButtonItem.add(movInchis_cremItem);
-
         curcubeuItem = new JRadioButtonMenuItem("Curcubeu");
         grupRadioButtonItem.add(curcubeuItem);
-
         curcubeuInchisItem = new JRadioButtonMenuItem("Curcubeu Închis");
         grupRadioButtonItem.add(curcubeuInchisItem);
-
         crem_maroItem = new JRadioButtonMenuItem("Crem - Maro");
         grupRadioButtonItem.add(crem_maroItem);
-
         alb_griInchisItem = new JRadioButtonMenuItem("Alb - Gri Închis");
         grupRadioButtonItem.add(alb_griInchisItem);
-
         alb_albastruItem = new JRadioButtonMenuItem("Alb - Albastru");
         grupRadioButtonItem.add(alb_albastruItem);
-
         albastruGri_cremInchisItem = new JRadioButtonMenuItem("Albastru Gri - Crem Închis");
         grupRadioButtonItem.add(albastruGri_cremInchisItem);
-
         albastruInchis_albastruDeschisItem = new JRadioButtonMenuItem("Albastru Închis - Albastru Deschis");
         grupRadioButtonItem.add(albastruInchis_albastruDeschisItem);
-
         albastru_verdeItem = new JRadioButtonMenuItem("Albastru - Verde");
         grupRadioButtonItem.add(albastru_verdeItem);
-
         maro_verdeGriItem = new JRadioButtonMenuItem("Maro - Verde Gri");
         grupRadioButtonItem.add(maro_verdeGriItem);
-
         verdeDeschis_verdeInchisItem = new JRadioButtonMenuItem("Verde Deschis - Verde Întunecat");
         grupRadioButtonItem.add(verdeDeschis_verdeInchisItem);
-
         verdeInchis_albastruGriItem =new JRadioButtonMenuItem("Verde Închis - Albastru Gri");
         grupRadioButtonItem.add(verdeInchis_albastruGriItem);
 
-        //  Adaugarea de ActionListener
         setareActionListenerJRadioItems();
-
-        //  Adaugarea item-urilor la submeniu
         aspect.add(defaultItem);
         aspect.add(mov_rozItem);
         aspect.add(mov_galbenItem);
@@ -714,7 +588,6 @@ public class CadrulPrincipal extends JFrame {
         aspect.add(maro_verdeGriItem);
         aspect.add(verdeDeschis_verdeInchisItem);
         aspect.add(verdeInchis_albastruGriItem);
-
         return aspect;
     }
 
@@ -729,7 +602,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  Culori_Generale.CULOARE3.getColor());
             }
         });
-
         getMov_rozItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -740,7 +612,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  MovRoz.CULOARE6.getColor());
             }
         });
-
         getMov_galbenItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -751,7 +622,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE1.getColor(), getFereastraGoala(),  MovGalben.CULOARE6.getColor());
             }
         });
-
         getMov_rosuItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -762,7 +632,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE1.getColor(), getFereastraGoala(),  MovRosu.CULOARE6.getColor());
             }
         });
-
         getMovInchis_cremItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -773,7 +642,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE1.getColor(), getFereastraGoala(),  MovInchis_Crem.CULOARE6.getColor());
             }
         });
-
         getCurcubeuItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -784,7 +652,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  Curcubeu.CULOARE6.getColor());
             }
         });
-
         getCurcubeuInchisItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -795,7 +662,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  CurcubeuInchis.CULOARE6.getColor());
             }
         });
-
         getCrem_maroItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -806,7 +672,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  CremMaro.CULOARE6.getColor());
             }
         });
-
         getAlb_griInchisItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -817,7 +682,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  Alb_GriInchis.CULOARE6.getColor());
             }
         });
-
         getAlb_albastruItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -828,7 +692,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  AlbAlbastru.CULOARE6.getColor());
             }
         });
-
         getAlbastruGri_cremInchisItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -839,7 +702,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  AlbastruGri_CremInchis.CULOARE6.getColor());
             }
         });
-
         getAlbastruInchis_albastruDeschisItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -850,7 +712,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE1.getColor(), getFereastraGoala(),  AlbastruInchis_AlbastruDeschis.CULOARE6.getColor());
             }
         });
-
         getAlbastru_verdeItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -861,7 +722,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  AlbastruVerde.CULOARE6.getColor());
             }
         });
-
         getMaro_verdeGriItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -872,7 +732,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  Maro_VerdeGri.CULOARE6.getColor());
             }
         });
-
         getVerdeDeschis_verdeInchisItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -883,7 +742,6 @@ public class CadrulPrincipal extends JFrame {
                         getFereastraPericoleRecomandari(), Culori_Generale.CULOARE2.getColor(), getFereastraGoala(),  VerdeDeschis_VerdeInchis.CULOARE6.getColor());
             }
         });
-
         getVerdeInchis_albastruGriItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -896,7 +754,6 @@ public class CadrulPrincipal extends JFrame {
         });
     }
 
-    //  Pt. vizualizare
     private void deselectareButoane() {
         getVPNItem().setSelected(false);
         getTrackerItem().setSelected(false);
@@ -904,30 +761,22 @@ public class CadrulPrincipal extends JFrame {
         getCloudBackUpItem().setSelected(false);
         getAntiVirusItem().setSelected(false);
         getRecomandariItem().setSelected(false);
-
         getFereastraPericoleRecomandari().getVPNCheck().setSelected(false);
         getFereastraPericoleRecomandari().getTrackerCheck().setSelected(false);
         getFereastraPericoleRecomandari().getFingerPrintingCheck().setSelected(false);
         getFereastraPericoleRecomandari().getCloudBackupCheck().setSelected(false);
         getFereastraPericoleRecomandari().getAntiVirusCheck().setSelected(false);
         getFereastraPericoleRecomandari().getRecomandariCheck().setSelected(false);
-
     }
-
-    //  Ajuta fct. de mai jos sa realizeze sincronizarea cu pagina de pericole si recomandari + JMenuBar
 
     private void selectie(boolean vpn, boolean tracker, boolean fingerPrinting, boolean cloudBackUp,
                           boolean antivirus, boolean recomandari, String numeFisier) {
-    //  Zona de JMenu
-
         getVPNItem().setSelected(vpn);
         getTrackerItem().setSelected(tracker);
         getFingerPrintingItem().setSelected(fingerPrinting);
         getCloudBackUpItem().setSelected(cloudBackUp);
         getAntiVirusItem().setSelected(antivirus);
         getRecomandariItem().setSelected(recomandari);
-
-        //  Zona de CheckBox-uri
 
         fereastraPericoleRecomandari.getVPNCheck().setSelected(vpn);
         fereastraPericoleRecomandari.getTrackerCheck().setSelected(tracker);
@@ -943,19 +792,16 @@ public class CadrulPrincipal extends JFrame {
         File fisierSelectat = new File(String.format("Pericole_Si_Recomandari/%s.anmb", numeFisier));
         Gestionare_Fisiere.citesteFisier(fisierSelectat, getFereastraText(),
                 CadrulPrincipal.this);
-
         CardLayout card = (CardLayout) (getMultimeMeniuriCenter().getLayout());
         card.show(getMultimeMeniuriCenter(), "Fereastra Text");
         getPanouTextItem().setSelected(true);
         getPanouPagPrincipala().setSelected(false);
-
         CardLayout card2 = (CardLayout) (getMultimeMeniuriSouth().getLayout());
         card2.show(getMultimeMeniuriSouth(), "Fereastra Pericole si Recomandari");
         getPanouTextItem().setSelected(true);
         getPanouPagPrincipala().setSelected(false);
     }
     private void setareActionListenerJCheckBoxItem() {
-        //  Pt. VPN
         getVPNItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -968,8 +814,6 @@ public class CadrulPrincipal extends JFrame {
                 updatePreferredSize(getMultimeMeniuriSouth(), new Dimension(1400, 50));
             }
         });
-
-        //  Pt. Tracker
         getTrackerItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -982,8 +826,6 @@ public class CadrulPrincipal extends JFrame {
                 updatePreferredSize(getMultimeMeniuriSouth(), new Dimension(1400, 50));
             }
         });
-
-        //  Pt. FingerPrinting
         getFingerPrintingItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -996,8 +838,6 @@ public class CadrulPrincipal extends JFrame {
                 updatePreferredSize(getMultimeMeniuriSouth(), new Dimension(1400, 50));
             }
         });
-
-        //  Pt. Cloud Back-Up
         getCloudBackUpItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1010,8 +850,6 @@ public class CadrulPrincipal extends JFrame {
                 updatePreferredSize(getMultimeMeniuriSouth(), new Dimension(1400, 50));
             }
         });
-
-        //  Pt. AntiVirus
         getAntiVirusItem().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1026,9 +864,7 @@ public class CadrulPrincipal extends JFrame {
         });
     }
 
-    //  Adaugare ActionListener pentru fereastra Pericole si Recomandari
     private void adaugareActionListener_fPericole() {
-
         getFereastraPericoleRecomandari().getVPNCheck().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1036,7 +872,6 @@ public class CadrulPrincipal extends JFrame {
                         "Rețeaua privată virtuală");
             }
         });
-
         getFereastraPericoleRecomandari().getTrackerCheck().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1044,7 +879,6 @@ public class CadrulPrincipal extends JFrame {
                         "Atacuri prin urmărirea activităților de pe internet");
             }
         });
-
         getFereastraPericoleRecomandari().getFingerPrintingCheck().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1052,7 +886,6 @@ public class CadrulPrincipal extends JFrame {
                         "Amprentare digitală");
             }
         });
-
         getFereastraPericoleRecomandari().getCloudBackupCheck().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1060,7 +893,6 @@ public class CadrulPrincipal extends JFrame {
                         "Copii de rezervă în cloud");
             }
         });
-
         getFereastraPericoleRecomandari().getAntiVirusCheck().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1070,155 +902,6 @@ public class CadrulPrincipal extends JFrame {
         });
     }
 
-    //  Zona de Gettere
-
-    public JMenu getFisier() {
-        return fisier;
-    }
-
-    public JMenu getFereastra() {
-        return fereastra;
-    }
-
-    public JCheckBoxMenuItem getPanouTeorieItem() {return panouTeorieItem;}
-    public JCheckBoxMenuItem getPanouInfoGeneralItem() {return panouInfoGeneralItem;}
-    public JCheckBoxMenuItem getPanouTextItem() {return panouTextItem;}
-    public JCheckBoxMenuItem getPanouPagPrincipala() {return panouPagPrincipala;}
-
-    //
-
-
-    public JCheckBoxMenuItem getVPNItem() {
-        return VPNItem;
-    }
-
-    public JCheckBoxMenuItem getTrackerItem() {
-        return trackerItem;
-    }
-
-    public JCheckBoxMenuItem getFingerPrintingItem() {
-        return fingerPrintingItem;
-    }
-
-    public JCheckBoxMenuItem getCloudBackUpItem() {
-        return cloudBackUpItem;
-    }
-
-    public JCheckBoxMenuItem getAntiVirusItem() {
-        return antiVirusItem;
-    }
-
-    public JCheckBoxMenuItem getRecomandariItem() {
-        return recomandariItem;
-    }
-
-    //
-    public JPanel getMultimeMeniuriWest() {return multimeMeniuriWest;}
-    public JPanel getMultimeMeniuriCenter() {return multimeMeniuriCenter;}
-    public JPanel getMultimeMeniuriSouth() {return multimeMeniuriSouth;}
-
-    public JRadioButtonMenuItem getDefaultItem() {
-        return defaultItem;
-    }
-
-    public JRadioButtonMenuItem getMov_rozItem() {
-        return mov_rozItem;
-    }
-
-    public JRadioButtonMenuItem getMov_galbenItem() {
-        return mov_galbenItem;
-    }
-
-    public JRadioButtonMenuItem getMov_rosuItem() {
-        return mov_rosuItem;
-    }
-
-    public JRadioButtonMenuItem getMovInchis_cremItem() {
-        return movInchis_cremItem;
-    }
-
-    public JRadioButtonMenuItem getCurcubeuItem() {
-        return curcubeuItem;
-    }
-
-    public JRadioButtonMenuItem getCurcubeuInchisItem() {
-        return curcubeuInchisItem;
-    }
-
-    public JRadioButtonMenuItem getCrem_maroItem() {
-        return crem_maroItem;
-    }
-
-    public JRadioButtonMenuItem getAlb_griInchisItem() {
-        return alb_griInchisItem;
-    }
-
-    public JRadioButtonMenuItem getAlb_albastruItem() {
-        return alb_albastruItem;
-    }
-
-    public JRadioButtonMenuItem getAlbastruGri_cremInchisItem() {
-        return albastruGri_cremInchisItem;
-    }
-
-    public JRadioButtonMenuItem getAlbastruInchis_albastruDeschisItem() {
-        return albastruInchis_albastruDeschisItem;
-    }
-
-    public JRadioButtonMenuItem getAlbastru_verdeItem() {
-        return albastru_verdeItem;
-    }
-
-    public JRadioButtonMenuItem getMaro_verdeGriItem() {
-        return maro_verdeGriItem;
-    }
-
-    public JRadioButtonMenuItem getVerdeDeschis_verdeInchisItem() {
-        return verdeDeschis_verdeInchisItem;
-    }
-
-    public JRadioButtonMenuItem getVerdeInchis_albastruGriItem() {
-        return verdeInchis_albastruGriItem;
-    }
-
-    public Fereastra_ListaVirusi getFereastraListaVirusi() {
-        return fereastraListaVirusi;
-    }
-
-    public Fereastra_InformatiiGenerale getFereastraInformatiiGenerale() {
-        return fereastraInformatiiGenerale;
-    }
-
-    public Fereastra_Text getFereastraText() {
-        return fereastraText;
-    }
-
-    public Fereastra_Principala getFereastraPrincipala() {
-        return fereastraPrincipala;
-    }
-
-    public JFileChooser getFereastraAlegereFisier() {
-        return fereastraAlegereFisier;
-    }
-
-    public JCheckBoxMenuItem getPanouDescrieAppItem() {
-        return panouDescrieAppItem;
-    }
-
-    public JCheckBoxMenuItem getPanouPericoleRecomandariItem() {
-        return panouPericoleRecomandariItem;
-    }
-
-    public Fereastra_DescriereAplicatie getFereastraDescriereAplicatie() {
-        return fereastraDescriereAplicatie;
-    }
-
-    public Fereastra_Pericole_Recomandari getFereastraPericoleRecomandari() {
-        return fereastraPericoleRecomandari;
-    }
-
-    public FereastraGoala getFereastraGoala() {return  fereastraGoala;}
-
     public void setDimNoua(JFrame cadru, int lungime, int inaltime) {
         if (!ecranCompletItem.isSelected()) {
             cadru.setExtendedState(JFrame.NORMAL);
@@ -1226,7 +909,6 @@ public class CadrulPrincipal extends JFrame {
             cadru.setSize(lungime, inaltime);
             cadru.setMinimumSize(new Dimension(lungime, inaltime));
         }
-
         cadru.revalidate();
         cadru.repaint();
     }
@@ -1236,11 +918,7 @@ public class CadrulPrincipal extends JFrame {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             GraphicsDevice gd = ge.getDefaultScreenDevice();
             DisplayMode dm = gd.getDisplayMode();
-
-            // Setează fereastra la dimensiunea ecranului
             cadru.setBounds(0, 0, dm.getWidth(), dm.getHeight() - 50);
-
-            // Revalidează și repictează toate componentele
             cadru.revalidate();
             cadru.repaint();
         }
@@ -1250,7 +928,6 @@ public class CadrulPrincipal extends JFrame {
         File fisierSelectat = new File(String.format("Descriere_App/%s.anmb", "DescriereaApp"));
         Gestionare_Fisiere.citesteFisier2(fisierSelectat, getFereastraDescriereAplicatie(),
                 CadrulPrincipal.this);
-        //  Setarea pozitiei cursorului
         getFereastraDescriereAplicatie().getZonaDescriere().setCaretPosition(0);
     }
     private void incarcareTemaCurenta() {
