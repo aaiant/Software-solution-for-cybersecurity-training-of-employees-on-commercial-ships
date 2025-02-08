@@ -1,17 +1,17 @@
-# Licență
+# License
 
-Această lucrare este licențiată sub [Licența Creative Commons Atribuire-FărăDerivare 4.0 Internațional](https://creativecommons.org/licenses/by-nd/4.0/).
+This work is licensed under the  [Licența Creative Commons Atribuire-FărăDerivare 4.0 Internațional](https://creativecommons.org/licenses/by-nd/4.0/).
 
-## Permisiuni
+## Permissions
 
-Permite utilizarea și distribuirea lucrării tale, cu condiția să menționeze autorul original.
+Allows for the use and distribution of your work, provided that the original author is credited.
 
-## Restrictii
+## Restrictions
 
-- Nu permite modificarea sau adaptarea lucrării tale.
-- Nu permite construirea de lucrări derivate din această lucrare.
-- Nu permite distribuirea sub o altă licență decât [Licența Creative Commons Atribuire-FărăDerivare 4.0 Internațional](https://creativecommons.org/licenses/by-nd/4.0/).
+- Does not allow for the modification or adaptation of your work.
+- Does not permit the creation of derivative works from this work.
+- Does not allow distribution under any other license than the [Licența Creative Commons Atribuire-FărăDerivare 4.0 Internațional](https://creativecommons.org/licenses/by-nd/4.0/).
 
-## Detalii complete
+## Full details
 
-Pentru detalii complete, vizitați: [Creative Commons](https://creativecommons.org/licenses/by-nd/4.0/)
+For complete details, visit:  [Creative Commons](https://creativecommons.org/licenses/by-nd/4.0/)
