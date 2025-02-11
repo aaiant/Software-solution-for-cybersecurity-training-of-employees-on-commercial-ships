@@ -1,4 +1,5 @@
 <h2>Software-solution-for-cybersecurity-training-of-employees-on-commercial-ships</h2>
+
 &emsp;About this Repo: **This repository represents the bachelor's thesis completed at the Faculty of Navigation and Naval Management, Navigation and Maritime and River Transport profile, from the "Mircea cel Bătrân" Naval Academy. 
 For this thesis, I had to write a minimum of 40 pages in which I presented, with solid arguments, concepts related to cybersecurity in the maritime domain. This includes types of viruses, the dangers they can generate, and prevention methods.
 <br>&emsp;To better illustrate the chosen topic, I decided to develop a small graphical interface using the Java Swing programming language. Based on this GUI, I tried to create a method through which people without computer science knowledge could learn
