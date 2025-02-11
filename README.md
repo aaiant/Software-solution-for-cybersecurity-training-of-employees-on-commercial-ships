@@ -20,7 +20,6 @@ about cybersecurity in the maritime field. The project is designed to work on an
   <p>&emsp;Although I am the rightful author of this bachelor's thesis, the rights to it now belong to the "Mircea cel Bătrân" Naval Academy, Faculty of Navigation and Naval Management, Navigation and Maritime and River Transport profile. 
     Therefore, anyone wishing to use this code must take into account that they need to obtain the faculty's consent.</p>
 </div>
-
 <br><h3>Images</h3>
 <hr>
 <div align="center" style="display: grid; 
