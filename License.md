@@ -1,6 +1,6 @@
 # LICENSE
 
-© 2025 "Mircea cel Bătrân" Naval Academy – Faculty of Navigation and Naval Management.  
+© 2024 "Mircea cel Bătrân" Naval Academy – Faculty of Navigation and Naval Management.  
 All rights reserved.
 
 This project is published solely for academic and informational purposes, under the authority of the "Mircea cel Bătrân" Naval Academy – Faculty of Navigation and Naval Management.
